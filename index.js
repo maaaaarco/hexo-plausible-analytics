@@ -7,13 +7,22 @@
 
 /* global hexo */
 const injector = require('./lib/plausible');
-const { enable, pages, domain } = hexo.config.plausible;
 
-if (enable) {
+function run(config) {
+  if (!config) {
+    // plugin is not configured
+    return;
+  }
+
+  const { enable, pages, domain } = config;
+
+  if (!enable) {
+    return;
+  }
+
   if (!domain) {
-    throw new Error(
-      '[hexo-plausible-analytics - ERROR]: _domain_ cannot be blank'
-    );
+    console.log('ERROR  hexo-plausible-analytics: _domain_ cannot be blank');
+    return;
   }
 
   if (Array.isArray(pages)) {
@@ -28,3 +37,5 @@ if (enable) {
     hexo.extend.injector.register('head_end', injector(hexo));
   }
 }
+
+run(hexo.config.plausible);

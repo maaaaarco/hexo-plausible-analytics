@@ -17,6 +17,14 @@ beforeEach(() => {
   };
 });
 
+test('Does nothing if plugin has not been configured', () => {
+  jest.isolateModules(() => {
+    require('../index.js');
+  });
+
+  expect(__registerMock.mock.calls.length).toBe(0);
+});
+
 test('Does nothing if plugin is disabled', () => {
   hexo.config.plausible = {
     enable: false,
@@ -34,11 +42,11 @@ test('Throws error if domain is not defined', () => {
     enable: true,
   };
 
-  expect(() => {
-    jest.isolateModules(() => {
-      require('../index.js');
-    });
-  }).toThrow();
+  jest.isolateModules(() => {
+    require('../index.js');
+  });
+
+  expect(__registerMock.mock.calls.length).toBe(0);
 });
 
 test('Registers specified pages correctly', () => {
@@ -93,5 +101,3 @@ test('When pages is set to _default_ registers all pages correctly', () => {
     expect(call.length).toBe(2);
   });
 });
-
-
