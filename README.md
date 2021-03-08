@@ -4,7 +4,16 @@ A simple Hexo plugin to inject [Plausible Analytics](https://plausible.io) scrip
 
 ## General
 
-- Compatibility: Hexo 3 and above
+Compatibility: Hexo 3 and above
+
+- [Features](#Features)
+- [Install](#Install)
+- [Configurations](#Configurations)
+  - [Enable the plugin](#Enable-the-plugin)
+  - [Specify page types](#Specify-page-types)
+  - [Serve as first-party connection](#Serve-as-first-party-connection)
+  - [Exclude pages from being tracked](#Exclude-pages-from-being-tracked)
+  - [Self-hosting](#Self-hosting)
 
 ## Features
 
@@ -48,7 +57,7 @@ Will result in:
 <script async defer data-domain="yourdomain.com" src="https://plausible.io/js/plausible.js"></script>
 ```
 
-### Enable only on specific page types
+### Specify page types
 
 The `pages` property is an array that allows you to specify on which page types to inject the script. Valid values are:
 
@@ -71,7 +80,7 @@ plausible:
     - post
 ```
 
-### Serve script as first-party connection
+### Serve as first-party connection
 
 Add the `subdomain` property and specify your subdomain if you want to serve the Plausible script as a [first-party](https://plausible.io/docs/custom-domain) connection.
 
@@ -88,7 +97,7 @@ Will result in:
 <script async defer data-domain="yourdomain.com" src="https://stats.yourdomain.com/js/index.js"></script>
 ```
 
-### Exclude specific pages from being tracked
+### Exclude pages from being tracked
 
 Specify in the `exclude` property the pages that you don't want to be tracked. You can enter them as a comma-separated string or as an array. Check the [official guide](https://plausible.io/docs/excluding-pages#2-add-the-pages-youd-like-to-exclude-from-being-tracked) on how to format them.
 
