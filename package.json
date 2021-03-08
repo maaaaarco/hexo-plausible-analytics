@@ -1,0 +1,24 @@
+{
+  "name": "hexo-plausible-analytics",
+  "version": "0.1.0",
+  "description": "Integrate your Hexo blog with Plausible Analytics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maaaaarco/hexo-plausible-analytics.git"
+  },
+  "keywords": [
+    "hexo",
+    "plausible",
+    "analytics"
+  ],
+  "author": "Marco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maaaaarco/hexo-plausible-analytics/issues"
+  },
+  "homepage": "https://github.com/maaaaarco/hexo-plausible-analytics#readme"
+}
