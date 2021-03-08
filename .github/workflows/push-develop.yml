@@ -1,11 +1,11 @@
-name: Main workflow
+name: Develop workflow
 
 on:
   push:
-    branches: [main]
+    branches: [develop]
 
 jobs:
-  validate_changes:
+  test_and_release_patch:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '12'
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Cache NPM dependencies
         uses: actions/cache@v2
@@ -30,10 +29,10 @@ jobs:
 
       - name: Run tests
         run: npm run test
-
-      - name: Release minor
+      
+      - name: Release patch
         run: |
           git config user.email "<>"
           git config user.name "release_bot"
-          npm run release:minor
-          git push  
+          npm run release:patch
+          git push

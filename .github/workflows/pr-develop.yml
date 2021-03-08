@@ -1,11 +1,9 @@
-name: Develop workflow
+name: Validate Pull Requests
 
 on:
   pull_request:
     branches: [develop]
-  push:
-    branches: [develop]
-
+    
 jobs:
   validate_changes:
     runs-on: ubuntu-latest
