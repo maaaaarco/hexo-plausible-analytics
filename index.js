@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2021 Marco
+ * Licensed under MIT license.
+ * For full license text, see LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ * If you would like to contribute https://github.com/maaaaarco/hexo-plausible-analytics
+ */
+
 /* global hexo */
 const injector = require('./lib/plausible');
 const { enable, pages, domain } = hexo.config.plausible;
