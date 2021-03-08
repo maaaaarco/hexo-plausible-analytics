@@ -14,6 +14,7 @@ Compatibility: Hexo 3 and above
   - [Serve as first-party connection](#Serve-as-first-party-connection)
   - [Exclude pages from being tracked](#Exclude-pages-from-being-tracked)
   - [Self-hosting](#Self-hosting)
+- [Contributing](#Contributing)
 
 ## Features
 
@@ -175,3 +176,7 @@ Will result in:
 ```html
 <script async defer data-domain="yourdomain.com" src="https://yourdomain.com/plausible.js" data-exclude="/blog4, /rule/*, /how-to-*, /*/admin"></script>
 ```
+
+## Contributing
+
+I work on the `develop` branch and release from the `main`. If you want to contribute fork this repository and create a new branch from `develop`. Once you are done open a Pull Request to `develop`.
