@@ -1,0 +1,6 @@
+.github
+.vscode
+test
+.commitlintrc.json
+.gitignore
+.versionrc.json

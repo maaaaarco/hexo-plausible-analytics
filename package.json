@@ -18,7 +18,7 @@
     "plausible",
     "analytics"
   ],
-  "author": "Marco",
+  "author": "Marco <marco@spaghetti.dev> (spaghetti.dev)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/maaaaarco/hexo-plausible-analytics/issues"
